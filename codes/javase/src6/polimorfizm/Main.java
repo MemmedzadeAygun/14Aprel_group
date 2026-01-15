@@ -17,7 +17,7 @@ public class Main {
 		cat.makeSound();
 		horse.makeSound();*/
 		
-//		Animal animal = new Cat("Tom");
+		Animal animal = new Cat("Tom");
 //		animal.makeSound();
 		
 //		Animal cat = new Horse("Qarabas");

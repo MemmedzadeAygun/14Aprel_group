@@ -1,6 +1,6 @@
 package oop2;
 
-public class Computer extends Object {
+public class Computer extends Object implements Cloneable {
 
 	public String model;
 	public int year;
@@ -31,5 +31,16 @@ public class Computer extends Object {
 		} else {
 			return false;
 		}
+	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Gozle bir deqiqe...");
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
 	}
 }

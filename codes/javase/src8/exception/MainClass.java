@@ -78,23 +78,23 @@ public class MainClass {
 //			System.out.println(e.getMessage());
 //		}
 
-		String[] str = { "12", "34", "56dh", "7" };
-
-		try {
-			String result = str[0];
-			System.out.println(result);
-
-			try {
-				int number = Integer.parseInt(str[2]);
-				System.out.println(number);
-
-			} catch (NumberFormatException e) {
-				System.out.println(e.getMessage());
-			}
-
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println(e.getMessage());
-		}
+//		String[] str = { "12", "34", "56dh", "7" };
+//
+//		try {
+//			String result = str[0];
+//			System.out.println(result);
+//
+//			try {
+//				int number = Integer.parseInt(str[2]);
+//				System.out.println(number);
+//
+//			} catch (NumberFormatException e) {
+//				System.out.println(e.getMessage());
+//			}
+//
+//		} catch (ArrayIndexOutOfBoundsException e) {
+//			System.out.println(e.getMessage());
+//		}
 
 	}
 }

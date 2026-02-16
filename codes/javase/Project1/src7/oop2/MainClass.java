@@ -4,13 +4,15 @@ public class MainClass {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Computer c1 = new Computer("Inspire", 2025);
-//		Computer c2 = new Computer("Inspire", 2025);
+		Computer c2 = new Computer("Inspire", 2025);
 		
-		Computer clone = (Computer) c1.clone();
-		clone.year = 2016;
+//		Computer clone = (Computer) c1.clone();
+//		clone.year = 2016;
+//		
+//		System.out.println(c1);
+//		System.out.println(clone);
 		
-		System.out.println(c1);
-		System.out.println(clone);
+		System.out.println(c1.equals(c2));
 		
 //		c1 = new Computer("Nitro", 2014);
 		
@@ -26,7 +28,7 @@ public class MainClass {
 //		Computer c2 = new Computer("Nitro", 2017);
 		
 		
-//		System.out.println(c1.equals(c2));
+
 //		System.out.println(c1.toString());
 		
 //		System.out.println(c1.hashCode());

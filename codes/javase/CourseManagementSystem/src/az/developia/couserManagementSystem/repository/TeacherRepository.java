@@ -6,10 +6,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import az.developia.couserManagementSystem.entity.Teacher;
+import az.developia.couserManagementSystem.exception.MyRuntimeException;
 
 public class TeacherRepository {
 
-	public void add(Teacher teacher){
+	public void add(Teacher teacher) throws MyRuntimeException{
+		
+		if (teacher.getName().length() > 45) {
+			throw new MyRuntimeException("Ad max 45 simvol ola biler");
+		}
 
 		String query = "INSERT INTO teachers(name, surname, age, username, password) VALUES" + "('" + teacher.getName()
 				+ "', '" + teacher.getSurname() + "', '" + teacher.getAge() + "', '" + teacher.getUsername() + "', '"

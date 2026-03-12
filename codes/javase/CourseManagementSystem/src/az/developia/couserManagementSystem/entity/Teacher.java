@@ -76,6 +76,12 @@ public class Teacher {
 				&& Objects.equals(password, other.password) && Objects.equals(surname, other.surname)
 				&& Objects.equals(username, other.username);
 	}
+
+	@Override
+	public String toString() {
+		return "Teacher [id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + ", username="
+				+ username + ", password=" + password + "]";
+	}
 	
 	
 	

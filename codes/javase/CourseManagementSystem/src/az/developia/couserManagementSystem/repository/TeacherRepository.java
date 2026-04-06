@@ -72,7 +72,8 @@ public class TeacherRepository {
 
 		boolean userIsExists = false;
 
-		String query = "SELECT COUNT(*) FROM teachers WHERE username = '" + username + "' and '"+password+"';";
+		String query = "SELECT COUNT(*) FROM teachers WHERE username = '" + username + "' AND password = '" + password
+				+ "';";
 
 		try {
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/course_sytem_db?useSSL=false",

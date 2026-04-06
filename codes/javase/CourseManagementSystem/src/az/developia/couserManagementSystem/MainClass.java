@@ -1,5 +1,7 @@
 package az.developia.couserManagementSystem;
 
+import java.time.LocalDateTime;
+
 import az.developia.couserManagementSystem.entity.Teacher;
 import az.developia.couserManagementSystem.exception.MyRuntimeException;
 import az.developia.couserManagementSystem.repository.TeacherRepository;
@@ -10,10 +12,12 @@ public class MainClass {
 		Teacher teacher = new Teacher(null, "Vuqar", "Rustemli", 13, "vuqar5", "1234");
 
 		TeacherRepository repo = new TeacherRepository();
+		
+		
 		try {
 			
 //			if (repo.login(teacher.getUsername(), teacher.getPassword())) {
-			if (repo.login("vuqar", "12345")) {
+			if (repo.login("vuqar", "1234")) {
 				System.out.println("user logged in");
 			}else {
 				System.out.println("username or password is incorrect!");
@@ -24,10 +28,11 @@ public class MainClass {
 			}else {
 				repo.add(teacher);
 				System.out.println("teacher was added");
+				
 			}
 			
 
-		} catch (MyRuntimeException e) {
+			} catch (MyRuntimeException e) {
 			System.out.println(e.getMyMessage());
 		}
 	}

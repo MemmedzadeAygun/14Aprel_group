@@ -15,10 +15,11 @@ public class Main2 {
 				
 				);
 		
-		List<String> list = students.stream()
+		 students.stream()
 		.filter(s -> s.getScore() > 50)
 		.map(a -> a.getName().toUpperCase())
-		.toList();
+//		.toList();
+		.forEach(System.out::println);
 		
 		Integer max = students.stream()
 		.map(s -> s.getScore())

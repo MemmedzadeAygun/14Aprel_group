@@ -18,18 +18,21 @@ public class SpringProject14aprelApplication {
 	ConfigurableApplicationContext run = SpringApplication.run(SpringProject14aprelApplication.class, args);
 		
 		//bean
-		Student bean = run.getBean(Student.class);
+//		Student bean = run.getBean(Student.class);
+		Student bean = run.getBean("myStudent1", Student.class);
+		Student bean2 = run.getBean("myStudent1", Student.class);
+		Student bean3 = run.getBean("myStudent1", Student.class);
 //		bean.getId();
 //		bean.getName();
 		System.out.println(bean);
-		
-		String[] beanDefinitionNames = run.getBeanDefinitionNames();
-		for (String name : beanDefinitionNames) {
-			System.out.println(name);
-		}
-		
-		
-		System.out.println("Hello World!");
+//		
+//		String[] beanDefinitionNames = run.getBeanDefinitionNames();
+//		for (String name : beanDefinitionNames) {
+//			System.out.println(name);
+//		}
+//		
+//		
+//		System.out.println("Hello World!");
 	}
 
 }

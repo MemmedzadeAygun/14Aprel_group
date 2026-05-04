@@ -1,14 +1,19 @@
 package az.developia.spring_project_14aprel.entity;
-
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+@Component(value = "myStudent1")
+//@Scope(value = "prototype")
 public class Student {
 	private Integer id;
 	private String name;
 	private String surname;
 	
 	public Student() {
+		System.out.println("Obyekt yaradildi");
 		this.id = 1;
 		this.name = "Eli";
 		this.surname = "Memmedov";
@@ -43,5 +48,14 @@ public class Student {
 		return "Student [id=" + id + ", name=" + name + ", surname=" + surname + "]";
 	}
 	
+	@PostConstruct
+	public void init() {
+		System.out.println("init method");
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("destroy method");
+	}
 	
 }

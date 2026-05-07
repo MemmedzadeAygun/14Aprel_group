@@ -19,12 +19,15 @@ public class SpringProject14aprelApplication {
 		
 		//bean
 //		Student bean = run.getBean(Student.class);
-		Student bean = run.getBean("myStudent1", Student.class);
-		Student bean2 = run.getBean("myStudent1", Student.class);
-		Student bean3 = run.getBean("myStudent1", Student.class);
+		Student student = run.getBean("myStudent1", Student.class);
+//		System.out.println(student.getComputer().getModel());
+		System.out.println(student.getComputer());
+		
+//		Student bean2 = run.getBean("myStudent1", Student.class);
+//		Student bean3 = run.getBean("myStudent1", Student.class);
 //		bean.getId();
 //		bean.getName();
-		System.out.println(bean);
+		System.out.println(student);
 //		
 //		String[] beanDefinitionNames = run.getBeanDefinitionNames();
 //		for (String name : beanDefinitionNames) {

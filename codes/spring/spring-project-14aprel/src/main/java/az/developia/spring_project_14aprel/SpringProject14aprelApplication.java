@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import az.developia.spring_project_14aprel.config.AppConfig;
+import az.developia.spring_project_14aprel.config.AppProperties;
 import az.developia.spring_project_14aprel.entity.Student;
 
 
@@ -19,15 +21,22 @@ public class SpringProject14aprelApplication {
 		
 		//bean
 //		Student bean = run.getBean(Student.class);
-		Student student = run.getBean("myStudent1", Student.class);
+//		Student student = run.getBean("myStudent1", Student.class);
 //		System.out.println(student.getComputer().getModel());
-		System.out.println(student.getComputer());
+//		System.out.println(student.getComputer());
 		
 //		Student bean2 = run.getBean("myStudent1", Student.class);
 //		Student bean3 = run.getBean("myStudent1", Student.class);
 //		bean.getId();
 //		bean.getName();
-		System.out.println(student);
+//		System.out.println(student);
+		
+	
+//	AppConfig bean = run.getBean(AppConfig.class);
+	AppProperties bean = run.getBean(AppProperties.class);
+	bean.showProperties();
+	
+
 //		
 //		String[] beanDefinitionNames = run.getBeanDefinitionNames();
 //		for (String name : beanDefinitionNames) {

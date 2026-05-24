@@ -6,6 +6,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import az.developia.spring_project_14aprel.config.AppConfig;
 import az.developia.spring_project_14aprel.config.AppProperties;
+import az.developia.spring_project_14aprel.config.LogDemo;
+import az.developia.spring_project_14aprel.entity.Book;
 import az.developia.spring_project_14aprel.entity.Student;
 
 
@@ -30,13 +32,21 @@ public class SpringProject14aprelApplication {
 //		bean.getId();
 //		bean.getName();
 //		System.out.println(student);
-		
+		        
 	
 //	AppConfig bean = run.getBean(AppConfig.class);
 	AppProperties bean = run.getBean(AppProperties.class);
 	bean.showProperties();
 	
+	LogDemo bean2 = run.getBean(LogDemo.class);
+	bean2.test();
+	
+	Book bean3 = run.getBean(Book.class);
+	bean3.builder()
+	.build()
+	.setName("Eli");
 
+	        
 //		
 //		String[] beanDefinitionNames = run.getBeanDefinitionNames();
 //		for (String name : beanDefinitionNames) {

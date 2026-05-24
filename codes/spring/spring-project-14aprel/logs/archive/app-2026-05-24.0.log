@@ -1,0 +1,103 @@
+2026-05-24 12:00:17.326 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 26072 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-05-24 12:00:17.332 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 12:00:17.407 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 12:00:17.407 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 12:00:19.079 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2026-05-24 12:00:19.102 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:00:19.105 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 12:00:19.107 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-24 12:00:19.172 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1760 ms
+2026-05-24 12:00:19.821 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:00:19.856 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2026-05-24 12:00:19.868 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 3.565 seconds (process running for 4.301)
+2026-05-24 12:00:19.875 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-05-24 12:00:19.877 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:00:19.877 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:01:50.563 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-24 12:01:50.575 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-24 12:01:50.578 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:01:50.618 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-24 12:01:50.619 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:01:51.275 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:01:51.277 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:02:26.168 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:02:26.168 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:03:06.117 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:03:06.118 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:04:02.349 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:04:02.350 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:04:07.317 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:04:07.317 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:04:11.321 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:04:11.321 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:14:39.186 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:14:39.187 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 12:22:28.658 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 26072 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-05-24 12:22:28.659 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 12:22:28.930 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2026-05-24 12:22:28.931 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:22:28.933 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 12:22:28.933 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-24 12:22:28.958 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 292 ms
+2026-05-24 12:22:29.036 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2026-05-24 12:22:29.042 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2026-05-24 12:22:29.044 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.436 seconds (process running for 1333.477)
+2026-05-24 12:22:29.046 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-24 12:22:29.048 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-05-24 12:22:29.048 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-05-24 12:22:29.048 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-05-24 13:10:48.768 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 15588 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-05-24 13:10:48.772 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 13:10:48.859 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:10:48.861 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:10:50.513 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-24 13:10:50.536 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-24 13:10:50.539 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 13:10:50.540 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-24 13:10:50.615 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1751 ms
+2026-05-24 13:10:50.736 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+2026-05-24 13:10:50.741 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-05-24 13:10:50.760 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-24 13:10:50.794 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at az.developia.spring_project_14aprel.SpringProject14aprelApplication.main(SpringProject14aprelApplication.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'server.port' in value "${server.port}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
+	... 22 common frames omitted

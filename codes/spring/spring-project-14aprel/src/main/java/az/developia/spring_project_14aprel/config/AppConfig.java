@@ -12,9 +12,14 @@ public class AppConfig {
 	@Value(value = "${app.active}")
 	private boolean active;
 	
+	@Value(value = "${server.port}")
+	private int port;
+	
+	
 	public void showProperties() {
 		System.out.println(author);
 		System.out.println(active);
+		System.out.println(port);
 	}
 	
 	

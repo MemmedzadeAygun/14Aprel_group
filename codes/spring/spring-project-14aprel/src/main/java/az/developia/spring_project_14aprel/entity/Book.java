@@ -13,10 +13,10 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 //@NoArgsConstructor
-//@ToString
+@ToString
 //@EqualsAndHashCode
 //@Data
-@Builder
+//@Builder
 public class Book {
 	private String name;
 	private Integer year;

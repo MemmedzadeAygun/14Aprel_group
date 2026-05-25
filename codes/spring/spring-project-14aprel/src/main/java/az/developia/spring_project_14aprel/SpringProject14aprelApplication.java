@@ -41,10 +41,10 @@ public class SpringProject14aprelApplication {
 	LogDemo bean2 = run.getBean(LogDemo.class);
 	bean2.test();
 	
-	Book bean3 = run.getBean(Book.class);
-	bean3.builder()
-	.build()
-	.setName("Eli");
+//	Book bean3 = run.getBean(Book.class);
+//	bean3.builder()
+//	.build()
+//	.setName("Eli");
 
 	        
 //		

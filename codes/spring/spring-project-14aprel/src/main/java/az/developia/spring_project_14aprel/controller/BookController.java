@@ -14,8 +14,8 @@ import az.developia.spring_project_14aprel.entity.Book;
 public class BookController {
 	
 	List<Book> books = new ArrayList<Book>(List.of(
-				new Book("Sefiller", 1987),
-				new Book("Harry Potter", 2001)
+				new Book(1,"Sefiller", 1987),
+				new Book(2,"Harry Potter", 2001)
 			));
 	
 //	@GetMapping(path = "/kitablar")

@@ -1,0 +1,81 @@
+2026-06-01 00:16:11.995 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m15s945ms128µs500ns).
+2026-06-01 00:26:48.353 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-01 00:26:48.391 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01 00:26:48.397 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:48.411 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-01 00:26:48.412 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:48.427 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-01 00:26:48.439 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-01 00:26:48.696 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 20640 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-01 00:26:48.698 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-01 00:26:49.212 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-01 00:26:49.219 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:49.220 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-01 00:26:49.220 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-01 00:26:49.249 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 542 ms
+2026-06-01 00:26:49.562 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:49.572 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-01 00:26:49.582 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.965 seconds (process running for 7858.265)
+2026-06-01 00:26:49.588 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-01 00:26:49.589 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-01 00:26:49.590 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-01 00:26:49.590 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-01 00:26:50.981 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-06-01 00:26:50.984 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01 00:26:50.985 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:50.993 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-01 00:26:50.994 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:51.145 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 20640 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-01 00:26:51.146 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-01 00:26:51.418 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-01 00:26:51.419 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:51.421 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-01 00:26:51.422 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-01 00:26:51.454 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 303 ms
+2026-06-01 00:26:51.575 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-01 00:26:51.585 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-01 00:26:51.590 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.514 seconds (process running for 7860.273)
+2026-06-01 00:26:51.591 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-01 00:26:51.592 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-01 00:26:51.593 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-01 00:26:51.593 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-01 00:27:37.728 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01 00:27:37.728 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-01 00:27:37.731 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-06-01 00:27:37.739 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-06-01 00:27:37.773 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57ffef6a
+2026-06-01 00:27:37.777 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-06-01 12:25:56.695 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 17920 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-01 12:25:56.701 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-01 12:25:56.782 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-01 12:25:56.782 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-01 12:25:58.802 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-01 12:25:58.825 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-01 12:25:58.829 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-01 12:25:58.829 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-01 12:25:58.913 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2128 ms
+2026-06-01 12:25:59.952 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-01 12:25:59.995 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-01 12:26:00.007 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 4.28 seconds (process running for 5.023)
+2026-06-01 12:26:00.014 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-01 12:26:00.014 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-01 12:26:00.014 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-01 12:26:36.999 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01 12:26:37.005 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-01 12:26:37.009 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-06-01 12:26:44.676 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-01 12:26:45.887 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c5c5d09
+2026-06-01 12:26:45.895 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-01 12:29:41.310 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-01 12:29:41.319 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01 12:29:41.322 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-01 12:29:41.334 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-01 12:29:41.336 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-01 12:29:41.346 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-01 12:29:41.370 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-01 12:29:41.506 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 17920 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-01 12:29:41.506 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-01 12:29:41.936 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-01 12:29:41.938 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-01 12:29:41.939 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-01 12:29:41.940 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]

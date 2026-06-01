@@ -12,12 +12,13 @@ import lombok.ToString;
 @Setter
 @Getter
 @AllArgsConstructor
-//@NoArgsConstructor
+@NoArgsConstructor
 @ToString
 //@EqualsAndHashCode
 //@Data
 //@Builder
 public class Book {
+	private Integer id;
 	private String name;
 	private Integer year;
 	

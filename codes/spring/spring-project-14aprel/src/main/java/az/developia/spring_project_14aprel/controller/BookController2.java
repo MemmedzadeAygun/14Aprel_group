@@ -15,22 +15,33 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.spring_project_14aprel.entity.Book;
 
 @RestController
+@RequestMapping(path = "/api/books")
 public class BookController2 {
 
 	@Autowired
 	private DataSource dataSource;
 
 	@GetMapping(path = "/getBooks")
-	public List<Book> getBooks() {
+	public List<Book> getBooks(@RequestParam(name = "name", required = false) String name,
+	@RequestParam(name = "year", required = false) String year) {
 		List<Book> books = new ArrayList<Book>();
 
 		try {
-			String query = "SELECT * FROM book;";
+			String query;
+			if (name == null || name.trim().isEmpty()) {
+				query = "SELECT * FROM book;";
+
+			} else {
+
+				query = "SELECT * FROM book WHERE name LIKE '%" + name + "%' and year='"+year+"';";
+			}
 			Connection conn = dataSource.getConnection();
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(query);
@@ -58,7 +69,7 @@ public class BookController2 {
 		Book book = null;
 
 		try {
-			String query = "SELECT * FROM book WHERE id='"+id+"';";
+			String query = "SELECT * FROM book WHERE id='" + id + "';";
 			Connection conn = dataSource.getConnection();
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(query);

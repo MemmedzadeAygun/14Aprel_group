@@ -1,0 +1,116 @@
+2026-06-04 18:07:58.264 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-04 18:07:58.421 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 37180 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-04 18:07:58.421 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-04 18:07:58.833 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-04 18:07:58.861 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:07:58.862 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-04 18:07:58.863 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-04 18:07:58.896 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 469 ms
+2026-06-04 18:07:59.403 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:07:59.425 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-04 18:07:59.437 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 1.076 seconds (process running for 482.596)
+2026-06-04 18:07:59.445 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-04 18:07:59.449 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-04 18:07:59.449 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-04 18:07:59.449 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-04 18:08:01.131 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04 18:08:01.133 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-04 18:08:01.135 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-06-04 18:08:01.147 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-06-04 18:08:01.200 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@767d521e
+2026-06-04 18:08:01.200 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-06-04 18:08:26.459 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-04 18:08:26.463 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-04 18:08:26.465 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:08:26.477 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-04 18:08:26.480 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:08:26.485 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-06-04 18:08:26.501 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-06-04 18:08:26.693 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 37180 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-04 18:08:26.693 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-04 18:08:27.196 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-04 18:08:27.199 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:08:27.200 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-04 18:08:27.201 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-04 18:08:27.239 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 537 ms
+2026-06-04 18:08:27.452 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-04 18:08:27.457 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-04 18:08:27.465 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.852 seconds (process running for 510.623)
+2026-06-04 18:08:27.469 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-04 18:08:27.470 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-04 18:08:27.471 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-04 18:08:27.471 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-04 21:20:45.318 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04 21:20:45.349 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-04 21:20:45.505 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 151 ms
+2026-06-04 21:20:45.705 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-06-04 21:20:46.091 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ad33c1a
+2026-06-04 21:20:46.093 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-06-04 21:21:39.363 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-04 21:21:39.371 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-04 21:21:39.374 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-04 21:21:39.382 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-04 21:21:39.382 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-04 21:21:39.390 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-06-04 21:21:39.406 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-06-04 21:21:39.700 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 37180 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-04 21:21:39.701 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-04 21:21:40.162 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-04 21:21:40.167 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-04 21:21:40.171 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-04 21:21:40.172 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-04 21:21:40.217 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 506 ms
+2026-06-04 21:21:40.417 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'bookController2' method 
+az.developia.spring_project_14aprel.controller.BookController2#getBooks(String)
+to {GET [/getBooks]}: There is already 'bookController' bean method
+az.developia.spring_project_14aprel.controller.BookController#getBooks(Model) mapped.
+2026-06-04 21:21:40.419 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-04 21:21:40.434 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-04 21:21:40.499 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'bookController2' method 
+az.developia.spring_project_14aprel.controller.BookController2#getBooks(String)
+to {GET [/getBooks]}: There is already 'bookController' bean method
+az.developia.spring_project_14aprel.controller.BookController#getBooks(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at az.developia.spring_project_14aprel.SpringProject14aprelApplication.main(SpringProject14aprelApplication.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController2' method 
+az.developia.spring_project_14aprel.controller.BookController2#getBooks(String)
+to {GET [/getBooks]}: There is already 'bookController' bean method
+az.developia.spring_project_14aprel.controller.BookController#getBooks(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 21 common frames omitted

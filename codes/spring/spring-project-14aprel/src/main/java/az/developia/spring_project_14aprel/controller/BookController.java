@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import az.developia.spring_project_14aprel.entity.Book;
 
 @Controller
+@RequestMapping(path = "/books")
 public class BookController {
 	
 	List<Book> books = new ArrayList<Book>(List.of(
@@ -23,7 +25,7 @@ public class BookController {
 //		return "books";
 //	}
 	
-	@GetMapping(path = "/kitablar")
+	@GetMapping(path = "/getBooks")
 	public String getBooks(Model model) {  
 		model.addAttribute("books", books);
 		return "books";

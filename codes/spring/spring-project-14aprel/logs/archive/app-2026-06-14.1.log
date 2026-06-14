@@ -1,7 +1,12 @@
-2026-06-14 14:30:28.656 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id must not be null or less than 0] with root cause
-java.lang.IllegalArgumentException: id must not be null or less than 0
-	at az.developia.spring_project_14aprel.service.BookService.updateBook(BookService.java:38)
-	at az.developia.spring_project_14aprel.controller.BookController2.updateBook(BookController2.java:66)
+2026-06-14 07:38:07.411 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-14 07:38:07.415 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-14 07:38:07.415 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-14 07:38:13.106 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-14 07:38:13.108 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-14 07:38:13.114 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-06-14 07:38:13.357 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "az.developia.spring_project_14aprel.service.BookService.addBook(az.developia.spring_project_14aprel.entity.Book)" because "this.bookService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "az.developia.spring_project_14aprel.service.BookService.addBook(az.developia.spring_project_14aprel.entity.Book)" because "this.bookService" is null
+	at az.developia.spring_project_14aprel.controller.BookController2.addBook(BookController2.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
@@ -13,8 +18,8 @@ java.lang.IllegalArgumentException: id must not be null or less than 0
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
@@ -45,13 +50,9 @@ java.lang.IllegalArgumentException: id must not be null or less than 0
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-06-14 14:30:40.929 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
-2026-06-14 14:30:40.971 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f2fa368
-2026-06-14 14:30:40.971 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
-2026-06-14 14:30:41.022 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id not found] with root cause
-java.lang.IllegalArgumentException: id not found
-	at az.developia.spring_project_14aprel.service.BookService.updateBook(BookService.java:45)
-	at az.developia.spring_project_14aprel.controller.BookController2.updateBook(BookController2.java:66)
+2026-06-14 07:39:03.221 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "az.developia.spring_project_14aprel.service.BookService.addBook(az.developia.spring_project_14aprel.entity.Book)" because "this.bookService" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "az.developia.spring_project_14aprel.service.BookService.addBook(az.developia.spring_project_14aprel.entity.Book)" because "this.bookService" is null
+	at az.developia.spring_project_14aprel.controller.BookController2.addBook(BookController2.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
@@ -63,8 +64,8 @@ java.lang.IllegalArgumentException: id not found
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
@@ -95,3 +96,4 @@ java.lang.IllegalArgumentException: id not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-14 07:40:24.459 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)

@@ -1,5 +1,9 @@
-2026-06-14 14:30:28.656 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id must not be null or less than 0] with root cause
-java.lang.IllegalArgumentException: id must not be null or less than 0
+2026-06-14 12:15:39.393 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-14 12:15:48.884 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-14 12:15:48.884 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-14 12:15:48.889 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-06-14 12:15:48.901 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id must not be null or less than or equals 0] with root cause
+java.lang.IllegalArgumentException: id must not be null or less than or equals 0
 	at az.developia.spring_project_14aprel.service.BookService.updateBook(BookService.java:38)
 	at az.developia.spring_project_14aprel.controller.BookController2.updateBook(BookController2.java:66)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -45,12 +49,9 @@ java.lang.IllegalArgumentException: id must not be null or less than 0
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-06-14 14:30:40.929 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
-2026-06-14 14:30:40.971 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f2fa368
-2026-06-14 14:30:40.971 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
-2026-06-14 14:30:41.022 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id not found] with root cause
-java.lang.IllegalArgumentException: id not found
-	at az.developia.spring_project_14aprel.service.BookService.updateBook(BookService.java:45)
+2026-06-14 12:15:57.796 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: id must not be null or less than or equals 0] with root cause
+java.lang.IllegalArgumentException: id must not be null or less than or equals 0
+	at az.developia.spring_project_14aprel.service.BookService.updateBook(BookService.java:38)
 	at az.developia.spring_project_14aprel.controller.BookController2.updateBook(BookController2.java:66)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -95,3 +96,7 @@ java.lang.IllegalArgumentException: id not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-14 12:16:07.880 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-06-14 12:16:07.954 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ea4359
+2026-06-14 12:16:07.954 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-06-14 12:22:29.699 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 20176 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)

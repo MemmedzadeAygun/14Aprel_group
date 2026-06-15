@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import az.developia.spring_project_14aprel.entity.Book;
+import az.developia.spring_project_14aprel.repository.BookRepo;
 import az.developia.spring_project_14aprel.repository.BookRepository;
 
 @Service
@@ -14,23 +15,31 @@ public class BookService {
 	
 	@Autowired
 	private BookRepository bookRepository;
+	
+	@Autowired
+	private BookRepo bookRepo;
 
 	public List<Book> getBooks(String name, String year) {
 		return bookRepository.getBooks(name, year);
 	}
+	
+	public List<Book> getBooks() {
+		return bookRepo.findAll();
+	}
+	
 
-	public Book getBook(Integer id) {
+	public Optional<Book> getBook(Integer id) {
 		
-		return bookRepository.getBook(id);
+		return bookRepo.findById(id);
 	}
 
 	public String addBook(Book book) {
-		bookRepository.addBook(book);
+		bookRepo.save(book);
 		return "Kitab ugurla qeydiyyat edildi!";
 	}
  
 	public void deleteBook(Integer id) {
-		bookRepository.deleteBook(id); 
+		bookRepo.deleteById(id); 
 	}
 
 	public String updateBook(Book book) {
@@ -40,7 +49,7 @@ public class BookService {
 		
 		Optional<Book> bookById = bookRepository.getBookById(book.getId());
 		if (bookById.isPresent()) {
-			bookRepository.update(book);
+			bookRepo.save(book);
 		}else {
 			throw new IllegalArgumentException("id not found");
 		}

@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 
@@ -41,9 +42,17 @@ public class BookController2 {
 
 		return bookService.getBooks(name, year);
 	}
+	
+	@ResponseStatus(code = HttpStatus.OK)
+	@GetMapping(path = "/findAll")
+	public List<Book> getBooks() {
+
+		return bookService.getBooks();
+	}
+
 
 	@GetMapping(path = "/getBook/{id}")
-	public Book getBook(@PathVariable Integer id) {
+	public Optional<Book> getBook(@PathVariable Integer id) {
 	
 		return bookService.getBook(id);
 	}

@@ -39,7 +39,12 @@ public class BookService {
 	}
  
 	public void deleteBook(Integer id) {
-		bookRepo.deleteById(id); 
+		if (bookRepo.findById(id).isPresent()) {
+			bookRepo.deleteById(id); 
+		}else {
+			throw new IllegalArgumentException("id not found");
+		}
+		
 	}
 
 	public String updateBook(Book book) {
@@ -47,7 +52,7 @@ public class BookService {
 			throw new IllegalArgumentException("id must not be null or less than 0");
 		}
 		
-		Optional<Book> bookById = bookRepository.getBookById(book.getId());
+		Optional<Book> bookById = bookRepo.findById(book.getId());
 		if (bookById.isPresent()) {
 			bookRepo.save(book);
 		}else {

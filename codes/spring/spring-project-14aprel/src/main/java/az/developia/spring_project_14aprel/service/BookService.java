@@ -40,11 +40,12 @@ public class BookService {
  
 	public void deleteBook(Integer id) {
 		if (bookRepo.findById(id).isPresent()) {
-			bookRepo.deleteById(id); 
+//			bookRepo.deleteById(id); 
+			bookRepo.deleteBookNative(id);  
 		}else {
 			throw new IllegalArgumentException("id not found");
 		}
-		
+		 
 	}
 
 	public String updateBook(Book book) {
@@ -60,6 +61,11 @@ public class BookService {
 		}
 		
 		return "Book updated successfully!";
+	}
+
+	public List<Book> findBooksByAuthor(String author) { 
+		
+		return bookRepo.findBooksByAuthor(author);
 	}
 
 

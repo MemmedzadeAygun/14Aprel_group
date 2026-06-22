@@ -75,4 +75,9 @@ public class BookController2 {
 		return bookService.updateBook(book);
 	}
 	
+	@GetMapping
+	public List<Book> findBooksByAuthor(@RequestParam(name = "q") String author){
+		return bookService.findBooksByAuthor(author);
+	}
+	
 }

@@ -24,6 +24,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.spring_project_14aprel.entity.Book;
+import az.developia.spring_project_14aprel.requestDto.BookRequestDto;
+import az.developia.spring_project_14aprel.responseDto.BookListResponseDto;
+import az.developia.spring_project_14aprel.responseDto.BookResponseDto;
 import az.developia.spring_project_14aprel.service.BookService;
 
 @RestController
@@ -45,24 +48,26 @@ public class BookController2 {
 	
 	@ResponseStatus(code = HttpStatus.OK)
 	@GetMapping(path = "/findAll")
-	public List<Book> getBooks() {
+	public BookListResponseDto getBooks() {
 
 		return bookService.getBooks();
 	}
-
+	
 
 	@GetMapping(path = "/getBook/{id}")
-	public Optional<Book> getBook(@PathVariable Integer id) {
+	public BookResponseDto getBook(@PathVariable Integer id) {
 	
 		return bookService.getBook(id);
 	}
+	
 
 	@ResponseStatus(code = HttpStatus.CREATED)
 	@PostMapping(path = "/addBook")
-	public String addBook(@RequestBody Book book) {
+	public String addBook(@RequestBody BookRequestDto dto) {
 
-		return bookService.addBook(book);
+		return bookService.addBook(dto);
 	}
+	
 	
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	@DeleteMapping(path = "/book/{id}")

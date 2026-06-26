@@ -1,0 +1,84 @@
+2026-06-22 20:44:42.792 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 35388 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-22 20:44:42.795 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-22 20:44:42.983 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22 20:44:43.014 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2026-06-22 20:44:43.122 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-22 20:44:43.123 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:44:43.124 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-22 20:44:43.124 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-22 20:44:43.150 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 351 ms
+2026-06-22 20:44:43.181 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22 20:44:43.226 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22 20:44:43.228 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2026-06-22 20:44:43.294 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad7d9bc
+2026-06-22 20:44:43.295 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2026-06-22 20:44:43.298 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bookshopping_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: bookshopping_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22 20:44:43.353 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22 20:44:43.372 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 20:44:43.519 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22 20:44:43.621 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:44:43.626 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-22 20:44:43.629 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.881 seconds (process running for 2703.725)
+2026-06-22 20:44:43.629 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-22 20:44:43.630 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-22 20:44:43.630 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-22 20:44:43.630 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-22 20:45:02.457 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-22 20:45:02.459 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22 20:45:02.461 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:45:02.472 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-22 20:45:02.473 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:45:02.477 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 20:45:02.478 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2026-06-22 20:45:02.490 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+2026-06-22 20:45:02.602 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 35388 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-06-22 20:45:02.603 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-22 20:45:02.745 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22 20:45:02.767 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2026-06-22 20:45:02.870 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-06-22 20:45:02.871 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:45:02.872 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-22 20:45:02.872 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-22 20:45:02.899 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 294 ms
+2026-06-22 20:45:02.927 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22 20:45:02.961 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22 20:45:02.962 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2026-06-22 20:45:02.984 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45d4c6ff
+2026-06-22 20:45:02.985 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2026-06-22 20:45:02.987 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bookshopping_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: bookshopping_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22 20:45:03.042 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22 20:45:03.087 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 20:45:03.794 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22 20:45:03.909 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-06-22 20:45:03.921 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-06-22 20:45:03.926 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 1.358 seconds (process running for 2724.022)
+2026-06-22 20:45:03.928 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-22 20:45:03.929 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-06-22 20:45:03.929 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-06-22 20:45:03.929 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-06-22 20:45:06.303 INFO  o.a.c.c.C.[Tomcat-7].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22 20:45:06.304 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-22 20:45:06.309 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-06-22 22:16:41.993 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=35m8s16ms704µs300ns).

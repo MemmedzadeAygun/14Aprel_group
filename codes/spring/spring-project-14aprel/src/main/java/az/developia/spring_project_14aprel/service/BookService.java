@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import az.developia.spring_project_14aprel.entity.Book;
 import az.developia.spring_project_14aprel.repository.BookRepo;
 import az.developia.spring_project_14aprel.repository.BookRepository;
+import az.developia.spring_project_14aprel.requestDto.BookRequestDto;
+import az.developia.spring_project_14aprel.responseDto.BookListResponseDto;
+import az.developia.spring_project_14aprel.responseDto.BookResponseDto;
 
 @Service
 public class BookService {
@@ -23,20 +26,47 @@ public class BookService {
 		return bookRepository.getBooks(name, year);
 	}
 	
-	public List<Book> getBooks() {
-		return bookRepo.findAll();
+	public BookListResponseDto getBooks() {
+		List<Book> all = bookRepo.findAll();
+		BookListResponseDto dto = new BookListResponseDto();
+		dto.setBooks(all);
+		dto.setColor("Red");
+		return dto;
+	}
+	
+	
+
+//	obyekt -> entity -> dto object
+	public BookResponseDto getBook(Integer id) {
+		if (id == null || id <= 0) {
+			throw new RuntimeException("id must not be null or less than 0");
+		}
+		
+		Optional<Book> byId = bookRepo.findById(id);
+		
+		BookResponseDto dto = new BookResponseDto();
+		if (byId.isPresent()) {
+			Book book = byId.get();
+			dto.setId(book.getId());
+			dto.setName(book.getName());
+			dto.setYear(book.getYear());
+		}
+		return dto;
 	}
 	
 
-	public Optional<Book> getBook(Integer id) {
-		
-		return bookRepo.findById(id);
-	}
 
-	public String addBook(Book book) {
+//	obyekt -> dto obyekt -> entity object
+	public String addBook(BookRequestDto d) {
+		Book book = new Book();
+		book.setId(null);
+		book.setName(d.getName());
+		book.setYear(d.getYear());
+		book.setAuthor(d.getAuthor());
 		bookRepo.save(book);
 		return "Kitab ugurla qeydiyyat edildi!";
 	}
+	
  
 	public void deleteBook(Integer id) {
 		if (bookRepo.findById(id).isPresent()) {

@@ -3,6 +3,7 @@ package az.developia.spring_project_14aprel.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,9 @@ public class BookService {
 	
 	@Autowired
 	private BookRepo bookRepo;
+	
+	@Autowired
+	private ModelMapper modelMapper;
 
 	public List<Book> getBooks(String name, String year) {
 		return bookRepository.getBooks(name, year);
@@ -47,9 +51,7 @@ public class BookService {
 		BookResponseDto dto = new BookResponseDto();
 		if (byId.isPresent()) {
 			Book book = byId.get();
-			dto.setId(book.getId());
-			dto.setName(book.getName());
-			dto.setYear(book.getYear());
+			modelMapper.map(book, dto);
 		}
 		return dto;
 	}
@@ -59,10 +61,7 @@ public class BookService {
 //	obyekt -> dto obyekt -> entity object
 	public String addBook(BookRequestDto d) {
 		Book book = new Book();
-		book.setId(null);
-		book.setName(d.getName());
-		book.setYear(d.getYear());
-		book.setAuthor(d.getAuthor());
+		modelMapper.map(d, book);
 		bookRepo.save(book);
 		return "Kitab ugurla qeydiyyat edildi!";
 	}

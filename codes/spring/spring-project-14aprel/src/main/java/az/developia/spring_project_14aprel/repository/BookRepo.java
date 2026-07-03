@@ -21,5 +21,10 @@ public interface BookRepo extends JpaRepository<Book, Integer>{
 	@Query(value = "delete from book WHERE id=:id", nativeQuery = true) 
 //	@Query(value = "delete from Book b WHERE b.id=:id", nativeQuery = true)
 	void deleteBookNative(@Param(value = "id") Integer id);
+	
 
+	//SELECT * from book limit begin, length
+	//SELECT * from book limit 0, 10
+	@Query(value = "SELECT * from book limit ?1, ?2", nativeQuery = true)
+	List<Book> pagination(Integer begin, Integer length);
 }

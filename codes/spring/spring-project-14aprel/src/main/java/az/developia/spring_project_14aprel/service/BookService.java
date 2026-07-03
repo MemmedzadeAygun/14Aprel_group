@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import az.developia.spring_project_14aprel.entity.Book;
@@ -96,6 +98,18 @@ public class BookService {
 		
 		return bookRepo.findBooksByAuthor(author);
 	}
+
+	public List<Book> pagination(Integer begin, Integer length) {
+	
+		return bookRepo.pagination(begin, length);
+	}
+
+	public Page<Book> pagination2(PageRequest pagable) {
+		
+		return bookRepo.findAll(pagable);
+	}
+
+	
 
 
 }

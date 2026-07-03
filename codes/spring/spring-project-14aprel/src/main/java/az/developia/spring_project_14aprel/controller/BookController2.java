@@ -10,6 +10,8 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -53,6 +55,21 @@ public class BookController2 {
 		return bookService.getBooks();
 	}
 	
+	////api/books/pagination/begin/0/length/10"
+	@GetMapping(path = "/pagination/begin/{begin}/length/{length}") 
+	public List<Book> pagination(@PathVariable Integer begin, @PathVariable Integer length) {
+		
+		return bookService.pagination(begin, length);
+	}
+	
+	@GetMapping(path = "/pagination") 
+	public Page<Book> pagination2(@RequestParam(name = "page") Integer page,
+			@RequestParam(name = "size") Integer size) {
+		
+		PageRequest pagable = PageRequest.of(page, size);
+		
+		return bookService.pagination2(pagable);
+	}
 
 	@GetMapping(path = "/getBook/{id}")
 	public BookResponseDto getBook(@PathVariable Integer id) {

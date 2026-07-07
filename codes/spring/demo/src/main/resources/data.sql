@@ -1,0 +1,1 @@
+INSERT INTO computers (brand, model, computer_price) VALUES ('bmw', 'x6', 85000.5), ('bmw', 'x5', 17000.5);

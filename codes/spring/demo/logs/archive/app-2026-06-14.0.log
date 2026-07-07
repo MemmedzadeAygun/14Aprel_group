@@ -1,0 +1,82 @@
+2026-06-14 14:14:01.454 INFO  c.e.C.demo.DemoApplication - Starting DemoApplication using Java 21.0.9 with PID 12200 (C:\Users\Victus\Downloads\demo\demo\target\classes started by Victus in C:\Users\Victus\Downloads\demo\demo)
+2026-06-14 14:14:01.463 INFO  c.e.C.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-14 14:14:01.814 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-14 14:14:01.815 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-14 14:14:05.643 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
+2026-06-14 14:14:05.682 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:14:05.691 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-14 14:14:05.691 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-14 14:14:05.849 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4019 ms
+2026-06-14 14:14:07.519 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:14:07.604 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8086 (http) with context path '/'
+2026-06-14 14:14:07.623 INFO  c.e.C.demo.DemoApplication - Started DemoApplication in 8.136 seconds (process running for 13.756)
+2026-06-14 14:14:43.570 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-14 14:14:43.575 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-14 14:14:43.582 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-06-14 14:14:43.882 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.example.ComputerShopping.demo.entity.ComputerController.addComputer11(com.example.ComputerShopping.demo.entity.Computer)]
+2026-06-14 14:44:24.391 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-14 14:44:24.402 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-14 14:44:24.405 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:44:24.437 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-14 14:44:24.437 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:44:24.624 INFO  c.e.C.demo.DemoApplication - Starting DemoApplication using Java 21.0.9 with PID 12200 (C:\Users\Victus\Downloads\demo\demo\target\classes started by Victus in C:\Users\Victus\Downloads\demo\demo)
+2026-06-14 14:44:24.626 INFO  c.e.C.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-14 14:44:25.188 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
+2026-06-14 14:44:25.189 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:44:25.190 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-14 14:44:25.191 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-14 14:44:25.241 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 603 ms
+2026-06-14 14:44:25.278 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'computerController' defined in file [C:\Users\Victus\Downloads\demo\demo\target\classes\com\example\ComputerShopping\demo\entity\ComputerController.class]: Failed to instantiate [com.example.ComputerShopping.demo.entity.ComputerController]: Constructor threw exception
+2026-06-14 14:44:25.280 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-14 14:44:25.292 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-14 14:44:25.360 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'computerController' defined in file [C:\Users\Victus\Downloads\demo\demo\target\classes\com\example\ComputerShopping\demo\entity\ComputerController.class]: Failed to instantiate [com.example.ComputerShopping.demo.entity.ComputerController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.ComputerShopping.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.ComputerShopping.demo.entity.ComputerController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1338)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Identifier (" to complete MethodHeaderName
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at com.example.ComputerShopping.demo.entity.ComputerController.<init>(ComputerController.java:140)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:194)
+	... 24 common frames omitted
+2026-06-14 14:44:54.660 INFO  c.e.C.demo.DemoApplication - Starting DemoApplication using Java 21.0.9 with PID 12200 (C:\Users\Victus\Downloads\demo\demo\target\classes started by Victus in C:\Users\Victus\Downloads\demo\demo)
+2026-06-14 14:44:54.662 INFO  c.e.C.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-14 14:44:55.116 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
+2026-06-14 14:44:55.118 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+2026-06-14 14:44:55.119 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-14 14:44:55.121 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-14 14:44:55.161 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 486 ms
+2026-06-14 14:44:55.195 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'computerController' defined in file [C:\Users\Victus\Downloads\demo\demo\target\classes\com\example\ComputerShopping\demo\entity\ComputerController.class]: Failed to instantiate [com.example.ComputerShopping.demo.entity.ComputerController]: Constructor threw exception

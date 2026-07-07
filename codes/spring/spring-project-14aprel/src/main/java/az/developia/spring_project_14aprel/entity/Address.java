@@ -1,13 +1,10 @@
 package az.developia.spring_project_14aprel.entity;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -16,29 +13,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "users")
+@Table(name = "address")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-
+public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String firstName;
-	private String lastName;
-	private String username;
-	private String email;
-	private String password;
+	private String country;
+	private String city;
+	private String street;
 	
-	@OneToOne(mappedBy = "user")
-	private Address address;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<Order> orders; 
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<Favorite> favorites;
-
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 }

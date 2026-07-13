@@ -15,6 +15,7 @@ import az.developia.spring_project_14aprel.repository.BookRepository;
 import az.developia.spring_project_14aprel.requestDto.BookRequestDto;
 import az.developia.spring_project_14aprel.responseDto.BookListResponseDto;
 import az.developia.spring_project_14aprel.responseDto.BookResponseDto;
+import jakarta.persistence.EntityManager;
 
 @Service
 public class BookService {
@@ -27,6 +28,10 @@ public class BookService {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+	private EntityManager entityManager;
+
 
 	public List<Book> getBooks(String name, String year) {
 		return bookRepository.getBooks(name, year);
@@ -85,6 +90,8 @@ public class BookService {
 		}
 		
 		Optional<Book> bookById = bookRepo.findById(book.getId());
+		entityManager.detach(bookById);
+		entityManager.merge(bookById);
 		if (bookById.isPresent()) {
 			bookRepo.save(book);
 		}else {

@@ -28,5 +28,19 @@ public class UserService {
 		
 	}
 
+	public void delete(Integer id) {
+		if (id == null || id <= 0) {
+			throw new RuntimeException("id must not be null or less than 0");
+		}
+		
+		Optional<User> byId = userRepository.findById(id);
+		
+		if (byId.isPresent()) {
+			userRepository.deleteById(id);
+		}else {
+			throw new RuntimeException("id not found");
+		}
+	}
+
 
 }

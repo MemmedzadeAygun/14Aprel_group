@@ -2,6 +2,7 @@ package az.developia.spring_project_14aprel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import az.developia.spring_project_14aprel.config.AppConfig;
@@ -12,6 +13,7 @@ import az.developia.spring_project_14aprel.entity.Student;
 
 
 @SpringBootApplication
+@EnableCaching
 public class SpringProject14aprelApplication {
 	//auto config
 	//component scan

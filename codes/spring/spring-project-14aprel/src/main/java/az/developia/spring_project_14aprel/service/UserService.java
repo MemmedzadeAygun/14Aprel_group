@@ -5,9 +5,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import az.developia.spring_project_14aprel.entity.Order;
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.repository.UserRepository;
+import az.developia.spring_project_14aprel.responseDto.OrderResponseDto;
+import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 
 @Service
 public class UserService {
@@ -20,6 +24,14 @@ public class UserService {
 	    if (userByUsername.isPresent()) {
 			throw new RuntimeException("user already exists!");
 		}
+	    
+	    if (user.getOrders() != null) {
+			for (Order order : user.getOrders()) {
+				order.setUser(user);
+			}
+		}
+	    
+	    
 		userRepository.save(user);
 	}
 
@@ -28,6 +40,7 @@ public class UserService {
 		
 	}
 
+	@Transactional
 	public void delete(Integer id) {
 		if (id == null || id <= 0) {
 			throw new RuntimeException("id must not be null or less than 0");
@@ -40,6 +53,39 @@ public class UserService {
 		}else {
 			throw new RuntimeException("id not found");
 		}
+	}
+
+	public List<UserResponseDto> getAllUsers() {
+		
+		return userRepository.findUsers()
+				.stream()
+				.map(user -> {
+				  List<OrderResponseDto> orders = user.getOrders()
+					.stream()
+					.map(order -> new OrderResponseDto(
+							order.getId(),
+							order.getOrderDate(),
+							order.getStatus()
+							))
+					.toList();
+					
+					return new UserResponseDto(
+							user.getId(),
+							user.getFirstName(),
+							user.getLastName(),
+							user.getUsername(),
+							user.getEmail(),
+							user.getPassword(),
+							orders
+							);
+				})
+				.toList();
+				
+	}
+
+	public List<User> getUsersByName(String name) {
+		// TODO Auto-generated method stub
+		return userRepository.findByName(name);
 	}
 
 

@@ -1,6 +1,9 @@
 package az.developia.spring_project_14aprel.entity;
 
+import java.io.Serializable;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -31,7 +34,7 @@ import lombok.ToString;
 //@Builder
 @Entity
 @Table(name = "book")
-public class Book {
+public class Book implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -46,5 +49,6 @@ public class Book {
 	private Category category;
 	
 	@OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
-	private List<Favorite> favorite;
+	@JsonIgnore
+	private List<Favorite> favorite; 
 }

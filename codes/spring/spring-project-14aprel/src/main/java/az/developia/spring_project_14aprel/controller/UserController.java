@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.spring_project_14aprel.entity.User;
+import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 import az.developia.spring_project_14aprel.service.UserService;
 
 @RestController
@@ -38,5 +39,14 @@ public class UserController {
 	public void deleteUser(@PathVariable Integer id) {
 		userService.delete(id);
 	}
-
-}
+	
+	@GetMapping(path = "/get") 
+	public List<UserResponseDto> getAllUsers(){
+		return userService.getAllUsers();
+	}
+	
+	@GetMapping("/getUserByName")
+	public List<User> getUserByName(@RequestParam(name = "name") String name){
+		return userService.getUsersByName(name);
+	} 
+} 

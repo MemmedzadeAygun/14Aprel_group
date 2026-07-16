@@ -1,7 +1,7 @@
 
 insert into book(author, name, publish_year)
 values
-('Celil Memmequluzade', 'Oluler', 1996),
+('Celil Memmequluzade', 'Oluler2', 1996),
 ('Cey Esher', 'Spiderman', 1996),
 ('Celil Memmequluzade', 'Oluler', 1996),
 ('Cey Esher', 'Spiderman', 1996),

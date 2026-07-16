@@ -90,8 +90,8 @@ public class BookService {
 		}
 		
 		Optional<Book> bookById = bookRepo.findById(book.getId());
-		entityManager.detach(bookById);
-		entityManager.merge(bookById);
+//		entityManager.detach(bookById);
+//		entityManager.merge(bookById);
 		if (bookById.isPresent()) {
 			bookRepo.save(book);
 		}else {
@@ -101,7 +101,7 @@ public class BookService {
 		return "Book updated successfully!";
 	}
 
-	public List<Book> findBooksByAuthor(String author) { 
+	public List<Book> findBooksByAuthor(String author) {  
 		
 		return bookRepo.findBooksByAuthor(author);
 	}
@@ -115,8 +115,4 @@ public class BookService {
 		
 		return bookRepo.findAll(pagable);
 	}
-
-	
-
-
 }

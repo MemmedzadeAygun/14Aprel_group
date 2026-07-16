@@ -1,9 +1,8 @@
 package az.developia.spring_project_14aprel.responseDto;
 
-import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 
-import az.developia.spring_project_14aprel.entity.Book;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +12,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookListResponseDto implements Serializable{
-
-	private List<Book> books;
-	private String color;
+public class OrderResponseDto {
+	private Integer id;
+	private LocalDateTime orderDate;
+	private String status;
 }

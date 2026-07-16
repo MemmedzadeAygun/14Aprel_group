@@ -27,7 +27,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String firstName;
+	private String firstName; //first_name
 	private String lastName;
 	private String username;
 	private String email;
@@ -36,7 +36,7 @@ public class User {
 	@OneToOne(mappedBy = "user")
 	private Address address;
 	
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Order> orders; 
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

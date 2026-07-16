@@ -10,6 +10,7 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -50,8 +51,9 @@ public class BookController2 {
 	
 	@ResponseStatus(code = HttpStatus.OK)
 	@GetMapping(path = "/findAll")
+	@Cacheable(value = "books")
 	public BookListResponseDto getBooks() {
-
+		System.out.println("Database-den oxundu!");
 		return bookService.getBooks();
 	}
 	

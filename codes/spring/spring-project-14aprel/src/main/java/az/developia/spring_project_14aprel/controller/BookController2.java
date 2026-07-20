@@ -73,7 +73,7 @@ public class BookController2 {
 		return bookService.pagination2(pagable);
 	}
 
-	@GetMapping(path = "/getBook/{id}")
+	@GetMapping(path = "/getBook/{id}", produces = {"application/json", "application/xml"})
 	public BookResponseDto getBook(@PathVariable Integer id) {
 	
 		return bookService.getBook(id);

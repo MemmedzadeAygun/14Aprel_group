@@ -1,0 +1,69 @@
+2026-07-23 16:40:23.347 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-07-23 16:40:24.556 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-07-23 16:40:24.585 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-07-23 16:40:24.606 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 16:40:24.607 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-07-23 16:40:24.682 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3118 ms
+2026-07-23 16:40:34.827 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 12828 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-07-23 16:40:34.830 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-23 16:40:34.920 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-23 16:40:34.920 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-23 16:40:36.169 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 16:40:36.173 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 16:40:36.377 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186 ms. Found 2 JPA repository interfaces.
+2026-07-23 16:40:36.428 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 16:40:36.431 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-23 16:40:36.480 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.BookRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-23 16:40:36.482 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-23 16:40:36.483 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2026-07-23 16:40:37.630 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-07-23 16:40:37.659 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-07-23 16:40:37.664 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 16:40:37.665 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-07-23 16:40:37.776 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2852 ms
+2026-07-23 16:40:38.670 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 16:40:39.314 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1125f26
+2026-07-23 16:40:39.318 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 16:40:39.549 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-23 16:40:39.678 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-07-23 16:40:40.467 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 16:40:40.645 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bookshopping_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: bookshopping_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-23 16:40:42.424 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 16:40:43.858 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 16:40:44.146 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 16:40:46.098 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-23 16:40:47.164 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bookshopping_db'
+2026-07-23 16:40:47.251 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-07-23 16:40:47.286 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-07-23 16:40:47.299 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 13.358 seconds (process running for 14.222)
+2026-07-23 16:40:47.304 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-07-23 16:40:47.305 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-07-23 16:40:47.306 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-07-23 18:07:47.385 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m6s1ms706µs399ns).
+2026-07-23 18:15:06.769 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 18000 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-07-23 18:15:06.773 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-23 18:15:06.876 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-23 18:15:06.877 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-23 18:15:08.595 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 18:15:08.597 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 18:15:08.840 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 222 ms. Found 2 JPA repository interfaces.
+2026-07-23 18:15:08.886 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 18:15:08.888 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-23 18:15:08.926 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.BookRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-23 18:15:08.927 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-23 18:15:08.929 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-07-23 18:15:10.534 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-07-23 18:15:10.586 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-07-23 18:15:10.595 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 18:15:10.597 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]

@@ -3,6 +3,7 @@ package az.developia.spring_project_14aprel.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.spring_project_14aprel.entity.User;
+import az.developia.spring_project_14aprel.exception.OurRuntimeException;
+import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 import az.developia.spring_project_14aprel.service.UserService;
-
+import jakarta.validation.Valid;
 @RestController
 @RequestMapping(path = "/users")
 @CrossOrigin(origins = "*")
@@ -26,8 +29,11 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping(path = "/add")
-	public void addUser(@RequestBody User user) {
-		userService.createUser(user);
+	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws OurRuntimeException{
+		if (br.hasErrors()) {
+			throw new OurRuntimeException(br);
+		}
+		userService.createUser(dto);
 	}
 	
 	@GetMapping(path = "/getUsers")

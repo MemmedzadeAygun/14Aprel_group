@@ -3,6 +3,7 @@ package az.developia.spring_project_14aprel.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import az.developia.spring_project_14aprel.entity.Order;
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.repository.UserRepository;
+import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.OrderResponseDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 
@@ -18,22 +20,41 @@ public class UserService {
 	
 	@Autowired 
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
 
-	public void createUser(User user) {
-	    Optional<User> userByUsername = userRepository.findByUsername(user.getUsername());
+//	public void createUser(User user) {
+//	    Optional<User> userByUsername = userRepository.findByUsername(user.getUsername());
+//	    if (userByUsername.isPresent()) {
+//			throw new RuntimeException("user already exists!");
+//		}
+//	    
+//	    if (user.getOrders() != null) {
+//			for (Order order : user.getOrders()) {
+//				order.setUser(user);
+//			}
+//		}
+//	    
+//	    
+//		userRepository.save(user);
+//	}
+	
+	public void createUser(UserRequestDto dto) {
+	    Optional<User> userByUsername = userRepository.findByUsername(dto.getUsername());
 	    if (userByUsername.isPresent()) {
 			throw new RuntimeException("user already exists!");
 		}
 	    
-	    if (user.getOrders() != null) {
-			for (Order order : user.getOrders()) {
-				order.setUser(user);
-			}
-		}
+	    User user = new User();
 	    
+	    mapper.map(dto, user);
 	    
 		userRepository.save(user);
 	}
+	
+	
 
 	public List<User> getUsers(String name) { 
 		return  userRepository.findByfirstNameContaining(name);

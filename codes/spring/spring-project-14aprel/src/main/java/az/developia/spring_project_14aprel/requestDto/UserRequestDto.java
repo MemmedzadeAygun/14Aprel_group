@@ -37,7 +37,6 @@ public class UserRequestDto {
 	@NotBlank
 	private String password;
 	
-	@NotBlank
 	@Min(value = 18, message = "yas min 18 ola biler")
 	@Max(value = 25)
 	private Integer age;

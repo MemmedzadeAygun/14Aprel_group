@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import az.developia.spring_project_14aprel.exception.OurRuntimeException;
 
 @RestControllerAdvice
-public class ExecptionHandlers {
+public class ExceptionHandlers {
 	
 	@ExceptionHandler
 	public String handle(OurRuntimeException exc) {

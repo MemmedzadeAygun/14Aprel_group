@@ -27,6 +27,8 @@ public class UserRequestDto {
 	
 	@NotBlank(message = "istifadeci adi bos ola bilmez")
 	@Size(min = 3, max = 20, message = "username min 3, max 20 ola biler")
+//	@Equality(value = "xedice", message = "username xedice olmalidir!")
+	@Equality()
 	private String username;
 	
 	@Email

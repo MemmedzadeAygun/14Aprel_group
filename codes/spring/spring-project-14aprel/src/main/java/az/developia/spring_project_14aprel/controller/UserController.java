@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.exception.OurRuntimeException;
+import az.developia.spring_project_14aprel.exception.UserNotFoundException;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 import az.developia.spring_project_14aprel.service.UserService;
@@ -29,7 +30,7 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping(path = "/add")
-	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws OurRuntimeException{
+	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws OurRuntimeException, UserNotFoundException{
 		if (br.hasErrors()) {
 			throw new OurRuntimeException(br);
 		}
@@ -55,4 +56,5 @@ public class UserController {
 	public List<User> getUserByName(@RequestParam(name = "name") String name){
 		return userService.getUsersByName(name);
 	} 
+	
 } 

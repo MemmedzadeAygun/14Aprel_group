@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import az.developia.spring_project_14aprel.entity.Order;
 import az.developia.spring_project_14aprel.entity.User;
+import az.developia.spring_project_14aprel.exception.ResourcesNotFoundException;
+import az.developia.spring_project_14aprel.exception.UserNotFoundException;
 import az.developia.spring_project_14aprel.repository.UserRepository;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.OrderResponseDto;
@@ -41,10 +42,10 @@ public class UserService {
 //		userRepository.save(user);
 //	}
 	
-	public void createUser(UserRequestDto dto) {
+	public void createUser(UserRequestDto dto) throws UserNotFoundException {
 	    Optional<User> userByUsername = userRepository.findByUsername(dto.getUsername());
 	    if (userByUsername.isPresent()) {
-			throw new RuntimeException("user already exists!");
+			throw new UserNotFoundException("user already exists!");
 		}
 	    
 	    User user = new User();
@@ -72,7 +73,7 @@ public class UserService {
 		if (byId.isPresent()) {
 			userRepository.deleteById(id);
 		}else {
-			throw new RuntimeException("id not found");
+			throw new ResourcesNotFoundException("id not found");
 		}
 	}
 

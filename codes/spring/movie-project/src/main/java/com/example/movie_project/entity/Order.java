@@ -3,6 +3,7 @@ package com.example.movie_project.entity;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,24 +17,20 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "movies")
+@Table(name = "orders")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Movie { 
-
+public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String name;
-	private Double imdb;
-	private LocalDateTime movieDate;
+	private LocalDateTime orderDate;
+	private String status;
 	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id")
+	private User user;
 }
-
-//movie

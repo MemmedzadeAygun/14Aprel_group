@@ -1,13 +1,12 @@
 package com.example.movie_project.entity;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,24 +15,18 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "movies")
+@Table(name = "categories")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Movie { 
-
+public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
-	private Double imdb;
-	private LocalDateTime movieDate;
 	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
+	@OneToMany(mappedBy = "category")
+	private List<Movie> movies;
 }
-
-//movie

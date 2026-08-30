@@ -1,7 +1,10 @@
-package az.developia.spring_project_14aprel.entity;
+package com.example.movie_project.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -16,6 +19,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "users")
@@ -23,25 +27,23 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-
+@ToString
+public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String firstName; //first_name
-	private String lastName;
-	private String username;
-	private String email;
-	private String password;
+	private String name;
+	private String surname;
 	private Integer age;
+	private String username;
+	private String password;
+	private String email;
 	
 	@OneToOne(mappedBy = "user")
+//	@JsonIgnore
 	private Address address;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<Order> orders; 
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<Favorite> favorites;
-
+	@JsonIgnore
+	private List<Order> orders;
 }

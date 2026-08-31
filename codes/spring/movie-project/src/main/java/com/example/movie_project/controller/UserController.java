@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.movie_project.dto.request.UserRequestDto;
 import com.example.movie_project.dto.response.UserResponseDto;
 import com.example.movie_project.entity.User;
+import com.example.movie_project.exception.OurRuntimeException;
 import com.example.movie_project.service.UserService;
 
 import jakarta.validation.Valid;
@@ -26,7 +28,10 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping(path = "/add")
-	public void addUser(@Valid @RequestBody UserRequestDto dto) {
+	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) {
+		if (br.hasErrors()) {
+			throw new OurRuntimeException(br);
+		}
 		userService.addUser(dto);
 	}
 	

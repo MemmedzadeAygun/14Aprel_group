@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,6 +32,8 @@ public class UserRequestDto {
 	
 	@NotBlank
 	@NotNull
+//	@Equals(value = "rehman", message = "ad rehman olmalidir")
+	@Equals
 	private String username;
 	
 	@NotBlank

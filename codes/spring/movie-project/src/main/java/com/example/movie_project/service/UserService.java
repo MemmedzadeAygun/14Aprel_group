@@ -11,6 +11,8 @@ import com.example.movie_project.dto.request.UserRequestDto;
 import com.example.movie_project.dto.response.UserResponseDto;
 import com.example.movie_project.entity.Movie;
 import com.example.movie_project.entity.User;
+import com.example.movie_project.exception.ResourcesNotFoundException;
+import com.example.movie_project.exception.UserNotFoundException;
 import com.example.movie_project.repository.UserRepository;
 
 @Service
@@ -22,10 +24,10 @@ public class UserService {
 	@Autowired
 	private ModelMapper modelMapper;
 
-	public void addUser(UserRequestDto userDto) {
+	public void addUser(UserRequestDto userDto) throws UserNotFoundException {
 	    Optional<User> userByUsername = userRepository.findByUsername(userDto.getUsername());
 	    if (userByUsername.isPresent()) {
-			throw new RuntimeException("user already exists!");
+			throw new UserNotFoundException("user already exists!");
 		}
 	    
 	    User user = new User();
@@ -59,7 +61,7 @@ public class UserService {
 //			response.setEmail(user.getEmail());
 			modelMapper.map(user, response);
 		}else {
-			throw new RuntimeException("Bu obyekt movcud deyil!");
+			throw new ResourcesNotFoundException("Bu obyekt movcud deyil!");
 		}
 		return response;
 	}

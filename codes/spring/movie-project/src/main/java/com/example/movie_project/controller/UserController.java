@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.movie_project.dto.request.UserRequestDto;
 import com.example.movie_project.dto.response.UserResponseDto;
 import com.example.movie_project.entity.User;
-import com.example.movie_project.exception.OurRuntimeException;
+import com.example.movie_project.exception.UserNotFoundException;
+import com.example.movie_project.exception.ValidationException;
 import com.example.movie_project.service.UserService;
 
 import jakarta.validation.Valid;
@@ -28,9 +29,9 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping(path = "/add")
-	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) {
+	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws UserNotFoundException {
 		if (br.hasErrors()) {
-			throw new OurRuntimeException(br);
+			throw new ValidationException(br);
 		}
 		userService.addUser(dto);
 	}

@@ -2,11 +2,11 @@ package com.example.movie_project.exception;
 
 import org.springframework.validation.BindingResult;
 
-public class OurRuntimeException extends RuntimeException{
+public class ValidationException extends RuntimeException{
 
 	private BindingResult br;
 	
-	public OurRuntimeException(BindingResult br) {
+	public ValidationException(BindingResult br) {
 		this.br = br;
 	}
 	

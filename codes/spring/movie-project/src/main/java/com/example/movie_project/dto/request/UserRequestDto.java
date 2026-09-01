@@ -32,13 +32,13 @@ public class UserRequestDto {
 	
 	@NotBlank
 	@NotNull
-//	@Equals(value = "rehman", message = "ad rehman olmalidir")
-	@Equals
+	@Equals(value = "rehman", message = "ad rehman olmalidir")
+//	@Equals
 	private String username;
 	
 	@NotBlank
 	@NotNull
-	@Pattern(regexp = "")
+//	@Pattern(regexp = "")
 	private String password;
 	
 	@Email

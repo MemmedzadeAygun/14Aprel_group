@@ -3,12 +3,12 @@ package az.developia.spring_project_14aprel.exception;
 import org.springframework.validation.BindingResult;
 
 
-public class OurRuntimeException extends RuntimeException{
+public class ValidationException extends RuntimeException{
 
 	private BindingResult b;
 	
-	public OurRuntimeException(BindingResult br) {
-		super();
+	public ValidationException(BindingResult br, String message) {
+		super(message);
 		this.b = br;
 	}
 	

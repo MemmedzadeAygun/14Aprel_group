@@ -20,15 +20,15 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @RestControllerAdvice
 public class GlobalExceptionHandlers {
-	
+
 	@ExceptionHandler
 	public ExceptionResponse handle(ValidationException exc) {
 //		return exc.getB().getFieldErrors().get(0).getDefaultMessage(); 
 		ExceptionResponse response = new ExceptionResponse();
 		BindingResult b = exc.getB();
 		if (b == null) {
-			
-		}else {
+
+		} else {
 			List<FieldError> fieldErrors = b.getFieldErrors();
 			ArrayList<ValidationResponse> validations = new ArrayList<ValidationResponse>();
 			for (FieldError error : fieldErrors) {
@@ -40,26 +40,26 @@ public class GlobalExceptionHandlers {
 			response.setValidationResponse(validations);
 //			response.setValidationResponse(fieldErrors);
 		}
-		
+
 		response.setMessage(exc.getMessage());
-		
+
 		return response;
 	}
-	
+
 	@ExceptionHandler(UserNotFoundException.class)
-	public ResponseEntity<?> handle(UserNotFoundException ex){
+	public ResponseEntity<?> handle(UserNotFoundException ex) {
 //		return ResponseEntity.status(404).body(ex.getMessage());
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
 	}
 
 	@ExceptionHandler(ResourcesNotFoundException.class)
-	public ResponseEntity<?> handle(ResourcesNotFoundException ex, HttpServletRequest request){
-		
+	public ResponseEntity<?> handle(ResourcesNotFoundException ex, HttpServletRequest request) {
+
 		ErrorResponse error = new ErrorResponse();
 		error.setMessage(ex.getMessage());
 		error.setStatus(404);
 		error.setPath(request.getRequestURI());
-		
+
 		return ResponseEntity.badRequest().body(error);
 	}
 }

@@ -31,10 +31,14 @@ import az.developia.spring_project_14aprel.requestDto.BookRequestDto;
 import az.developia.spring_project_14aprel.responseDto.BookListResponseDto;
 import az.developia.spring_project_14aprel.responseDto.BookResponseDto;
 import az.developia.spring_project_14aprel.service.BookService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping(path = "/api/books")
 @CrossOrigin(origins = "*")
+@Tag(name = "Book Controller", description = "Kitablarla elaqeli API-ler")
 public class BookController2 {
 	
 	@Autowired
@@ -43,7 +47,7 @@ public class BookController2 {
 
 	@ResponseStatus(code = HttpStatus.OK)
 	@GetMapping(path = "/getBooks")
-	public List<Book> getBooks(@RequestParam(name = "name", required = false) String name,
+	public List<Book> getBooks(@Parameter(name = "Kitabin adi ve iline gore axtaris", example = "Ali ve Nino, 1996") @RequestParam(name = "name", required = false) String name,
 	@RequestParam(name = "year", required = false) String year) {
 
 		return bookService.getBooks(name, year);
@@ -59,6 +63,7 @@ public class BookController2 {
 	
 	////api/books/pagination/begin/0/length/10"
 	@GetMapping(path = "/pagination/begin/{begin}/length/{length}") 
+	@Operation(description = "GET API for pagination", summary = "This is a summary for books")
 	public List<Book> pagination(@PathVariable Integer begin, @PathVariable Integer length) {
 		
 		return bookService.pagination(begin, length);

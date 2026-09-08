@@ -20,7 +20,9 @@ import az.developia.spring_project_14aprel.exception.UserNotFoundException;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 import az.developia.spring_project_14aprel.service.UserService;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping(path = "/users")
 @CrossOrigin(origins = "*")
@@ -29,6 +31,11 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+
+	@ApiResponse(responseCode = "404",
+			description = "Resource not found")
+	@ApiResponse(responseCode = "200",
+	description = "Resource founded")
 	@PostMapping(path = "/add")
 	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws ValidationException, UserNotFoundException{
 		if (br.hasErrors()) {

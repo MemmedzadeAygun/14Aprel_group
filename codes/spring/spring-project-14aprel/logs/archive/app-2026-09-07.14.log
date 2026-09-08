@@ -1,0 +1,8 @@
+2026-09-07 21:54:37.186 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-09-07 21:54:37.191 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-09-07 21:54:37.191 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-09-07 21:54:40.060 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07 21:54:40.061 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-07 21:54:40.064 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-09-07 21:54:40.748 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 372 ms
+2026-09-07 23:06:22.493 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=44m14s70ms692µs600ns).

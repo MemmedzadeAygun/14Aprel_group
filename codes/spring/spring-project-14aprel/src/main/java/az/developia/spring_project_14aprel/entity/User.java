@@ -34,6 +34,7 @@ public class User {
 	private String email;
 	private String password;
 	private Integer age;
+	private Boolean enabled;
 	
 	@OneToOne(mappedBy = "user")
 	private Address address;

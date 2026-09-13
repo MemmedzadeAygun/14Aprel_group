@@ -5,12 +5,15 @@ import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import az.developia.spring_project_14aprel.entity.Authority;
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.exception.ResourcesNotFoundException;
 import az.developia.spring_project_14aprel.exception.UserNotFoundException;
+import az.developia.spring_project_14aprel.repository.AuthorityRepository;
 import az.developia.spring_project_14aprel.repository.UserRepository;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.OrderResponseDto;
@@ -21,6 +24,12 @@ public class UserService {
 	
 	@Autowired 
 	private UserRepository userRepository;
+	
+	@Autowired 
+	private AuthorityRepository authorityRepository;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	private ModelMapper mapper;
@@ -50,9 +59,21 @@ public class UserService {
 	    
 	    User user = new User();
 	    
-	    mapper.map(dto, user);
-	    
-		userRepository.save(user);
+//	    mapper.map(dto, user);
+	    user.setFirstName(dto.getFirstName());
+	    user.setLastName(dto.getLastName());
+	    user.setAge(dto.getAge());
+	    user.setEmail(dto.getEmail());
+	    user.setUsername(dto.getUsername());
+	    user.setEnabled(true);
+	    user.setPassword(passwordEncoder.encode(dto.getPassword()));
+	    userRepository.save(user);
+		
+	    Authority authority = new Authority();
+	    authority.setId(null);
+	    authority.setUsername(dto.getUsername());
+	    authority.setAuthority("ROLE_USER");
+	    authorityRepository.save(authority);
 	}
 	
 	
@@ -108,6 +129,13 @@ public class UserService {
 	public List<User> getUsersByName(String name) {
 		// TODO Auto-generated method stub
 		return userRepository.findByName(name);
+	}
+
+
+
+	public String login() {
+		// TODO Auto-generated method stub
+		return "User login succefully!";
 	}
 
 

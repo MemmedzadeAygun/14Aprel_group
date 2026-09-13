@@ -64,4 +64,8 @@ public class UserController {
 		return userService.getUsersByName(name);
 	} 
 	
+	@GetMapping(path = "/login")
+	public String login() {
+		return userService.login();
+	}
 } 

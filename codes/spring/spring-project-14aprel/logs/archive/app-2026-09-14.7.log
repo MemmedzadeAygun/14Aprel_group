@@ -1,38 +1,26 @@
-2026-09-14 21:44:10.076 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
-2026-09-14 21:44:10.084 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
-2026-09-14 21:44:14.576 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-14 21:44:14.576 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-09-14 21:44:14.581 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2026-09-14 21:46:04.822 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2026-09-14 21:46:04.858 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-09-14 21:46:04.859 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8085"]
-2026-09-14 21:46:04.868 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-09-14 21:46:04.869 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8085"]
-2026-09-14 21:46:04.875 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-09-14 21:46:04.876 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-09-14 21:46:04.887 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-09-14 21:46:05.054 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 25576 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
-2026-09-14 21:46:05.054 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
-2026-09-14 21:46:05.466 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2026-09-14 21:46:05.467 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-09-14 21:46:05.500 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
-2026-09-14 21:46:05.506 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2026-09-14 21:46:05.506 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-09-14 21:46:05.513 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.AuthorityRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-09-14 21:46:05.514 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.BookRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-09-14 21:46:05.514 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-09-14 21:46:05.514 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2026-09-14 21:46:05.782 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
-2026-09-14 21:46:05.783 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
-2026-09-14 21:46:05.784 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-09-14 21:46:05.785 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-09-14 21:46:05.863 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 802 ms
-2026-09-14 21:46:05.971 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-09-14 21:46:06.031 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-09-14 21:46:06.032 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-09-14 21:46:06.093 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66bfe0d6
-2026-09-14 21:46:06.094 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-09-14 21:46:06.098 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-09-14 12:07:23.612 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-09-14 12:07:23.784 INFO  a.d.s.SpringProject14aprelApplication - Starting SpringProject14aprelApplication using Java 21.0.8 with PID 25924 (C:\Github\14Aprel_group\codes\spring\spring-project-14aprel\target\classes started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-09-14 12:07:23.784 INFO  a.d.s.SpringProject14aprelApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-14 12:07:23.934 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-14 12:07:23.934 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14 12:07:23.948 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2026-09-14 12:07:23.951 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-14 12:07:23.951 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-14 12:07:23.955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.AuthorityRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-14 12:07:23.955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.BookRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-14 12:07:23.955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-14 12:07:23.955 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-09-14 12:07:24.089 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+2026-09-14 12:07:24.091 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+2026-09-14 12:07:24.092 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-14 12:07:24.092 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-14 12:07:24.114 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 328 ms
+2026-09-14 12:07:24.153 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14 12:07:24.174 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14 12:07:24.175 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2026-09-14 12:07:24.194 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bfa0bcd
+2026-09-14 12:07:24.195 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2026-09-14 12:07:24.197 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bookshopping_db]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -44,38 +32,39 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-09-14 21:46:06.348 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-09-14 21:46:06.394 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-09-14 21:46:06.698 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-14 21:46:06.771 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+2026-09-14 12:07:24.337 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14 12:07:24.357 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14 12:07:24.501 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14 12:07:24.525 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: ac26d1a7-08cb-4c91-80c8-b441953fdbd3
+Using generated security password: 80f30ffe-9567-4ea0-b1a5-69eb46e2e62f
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-09-14 21:46:06.776 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-09-14 21:46:07.056 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bookshopping_db'
-2026-09-14 21:46:07.098 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
-2026-09-14 21:46:07.109 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
-2026-09-14 21:46:07.114 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 2.117 seconds (process running for 255.361)
-2026-09-14 21:46:07.116 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc g endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-14 21:46:07.117 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-14 21:46:07.119 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-09-14 21:46:07.122 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
-2026-09-14 21:46:07.122 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
-2026-09-14 21:46:07.122 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
-2026-09-14 21:46:13.536 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-14 21:46:13.536 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-09-14 21:46:13.539 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-09-14 21:46:25.820 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Username or password incorrect!] with root cause
-java.lang.RuntimeException: Username or password incorrect!
-	at az.developia.spring_project_14aprel.service.UserService.login(UserService.java:145)
+2026-09-14 12:07:24.526 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-14 12:07:24.660 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bookshopping_db'
+2026-09-14 12:07:24.670 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+2026-09-14 12:07:24.673 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+2026-09-14 12:07:24.676 INFO  a.d.s.SpringProject14aprelApplication - Started SpringProject14aprelApplication in 0.922 seconds (process running for 228.416)
+2026-09-14 12:07:24.677 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc g endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-14 12:07:24.677 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-14 12:07:24.678 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-09-14 12:07:24.679 INFO  a.d.s.config.LogDemo - Sistem melumatlari ucun logging
+2026-09-14 12:07:24.679 WARN  a.d.s.config.LogDemo - Xeberadarliq mesajlari ucun logging
+2026-09-14 12:07:24.679 ERROR a.d.s.config.LogDemo - Kritik mesajlar ucun logging
+2026-09-14 12:07:30.413 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-14 12:07:30.414 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-14 12:07:30.415 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-09-14 12:07:37.136 WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-09-14 12:07:37.145 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Istifadeci adi ve ya parol sehvdir!] with root cause
+java.lang.RuntimeException: Istifadeci adi ve ya parol sehvdir!
+	at az.developia.spring_project_14aprel.service.UserService.login(UserService.java:144)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715)
 	at az.developia.spring_project_14aprel.service.UserService$$SpringCGLIB$$0.login(<generated>)
-	at az.developia.spring_project_14aprel.controller.UserController.login(UserController.java:76)
+	at az.developia.spring_project_14aprel.controller.UserController.login(UserController.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)

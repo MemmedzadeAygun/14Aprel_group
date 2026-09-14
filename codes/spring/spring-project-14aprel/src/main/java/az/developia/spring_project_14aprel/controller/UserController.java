@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.exception.ValidationException;
 import az.developia.spring_project_14aprel.exception.UserNotFoundException;
+import az.developia.spring_project_14aprel.requestDto.AuthRequestDto;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
 import az.developia.spring_project_14aprel.service.UserService;
@@ -64,8 +65,16 @@ public class UserController {
 		return userService.getUsersByName(name);
 	} 
 	
-	@GetMapping(path = "/login")
-	public String login() {
-		return userService.login();
+//	@GetMapping(path = "/login")
+//	public String login() {
+//		return userService.login();
+//	}
+	
+	
+	@PostMapping(path = "/login")
+	public String login(@RequestBody AuthRequestDto dto) {
+		return userService.login(dto); 
 	}
+	
+
 } 

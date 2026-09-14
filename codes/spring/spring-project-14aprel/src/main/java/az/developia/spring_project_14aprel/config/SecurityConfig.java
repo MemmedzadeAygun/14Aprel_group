@@ -20,35 +20,36 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity(prePostEnabled = true)
+//@EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-	@Autowired
-	private DataSource dataSource;
-
-	@Bean
-	public UserDetailsService userDetailsService() {
-		JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
-		jdbcDao.setDataSource(dataSource);
-		return jdbcDao;
-	}
+//	@Autowired
+//	private DataSource dataSource;
+//
+//	@Bean
+//	public UserDetailsService userDetailsService() {
+//		JdbcDaoImpl jdbcDao = new JdbcDaoImpl();
+//		jdbcDao.setDataSource(dataSource);
+//		return jdbcDao;
+//	}
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth -> 
 		auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 		.requestMatchers(HttpMethod.POST, "/users/add").permitAll()
-		.anyRequest().authenticated())
-				.httpBasic(Customizer.withDefaults());
+		.requestMatchers(HttpMethod.POST, "/users/login").permitAll()
+		.anyRequest().authenticated());
+//				.httpBasic(Customizer.withDefaults());
 		return http.build();
 	}
 	
-	@Bean
-    public AuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(userDetailsService());
-        authProvider.setPasswordEncoder(passwordEncoder());
-        return authProvider;
-    }
+//	@Bean
+//    public AuthenticationProvider authenticationProvider() {
+//        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(userDetailsService());
+//        authProvider.setPasswordEncoder(passwordEncoder());
+//        return authProvider;
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {

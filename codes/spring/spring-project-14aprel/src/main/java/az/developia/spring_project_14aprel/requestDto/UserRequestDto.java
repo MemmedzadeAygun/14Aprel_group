@@ -39,7 +39,7 @@ public class UserRequestDto {
 	@NotBlank
 	private String password;
 	
-	@Min(value = 18, message = "yas min 18 ola biler")
+	@Min(value = 13, message = "yas min 18 ola biler")
 	@Max(value = 25)
 	private Integer age;
 }

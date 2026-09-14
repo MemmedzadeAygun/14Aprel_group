@@ -15,11 +15,15 @@ import az.developia.spring_project_14aprel.exception.ResourcesNotFoundException;
 import az.developia.spring_project_14aprel.exception.UserNotFoundException;
 import az.developia.spring_project_14aprel.repository.AuthorityRepository;
 import az.developia.spring_project_14aprel.repository.UserRepository;
+import az.developia.spring_project_14aprel.requestDto.AuthRequestDto;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 import az.developia.spring_project_14aprel.responseDto.OrderResponseDto;
 import az.developia.spring_project_14aprel.responseDto.UserResponseDto;
+import az.developia.spring_project_14aprel.util.JwtUtil;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 	
 	@Autowired 
@@ -34,6 +38,8 @@ public class UserService {
 	@Autowired
 	private ModelMapper mapper;
 	
+
+	private final JwtUtil jwtUtil;
 
 //	public void createUser(User user) {
 //	    Optional<User> userByUsername = userRepository.findByUsername(user.getUsername());
@@ -133,10 +139,18 @@ public class UserService {
 
 
 
-	public String login() {
-		// TODO Auto-generated method stub
-		return "User login succefully!";
+	public String login(AuthRequestDto dto) {
+		Optional<User> user = userRepository.findByUsername(dto.getUsername());
+		if (!user.isPresent() || !passwordEncoder.matches(dto.getPassword(), user.get().getPassword()) ) {
+			throw new RuntimeException("Username or password incorrect!");
+		}
+		return jwtUtil.generateToken(user.get().getUsername());
 	}
 
 
+//	public String login() {
+//		return "User login succefully!";
+//	}
+	
+	
 }

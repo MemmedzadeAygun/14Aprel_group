@@ -17,11 +17,15 @@ import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
-//@EnableMethodSecurity(prePostEnabled = true)
+@EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
+	
+	@Autowired
+	private AuthFilter authFilter;
 
 //	@Autowired
 //	private DataSource dataSource;
@@ -39,7 +43,8 @@ public class SecurityConfig {
 		auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 		.requestMatchers(HttpMethod.POST, "/users/add").permitAll()
 		.requestMatchers(HttpMethod.POST, "/users/login").permitAll()
-		.anyRequest().authenticated());
+		.anyRequest().authenticated())
+		.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 //				.httpBasic(Customizer.withDefaults());
 		return http.build();
 	}

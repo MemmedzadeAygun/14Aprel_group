@@ -2,6 +2,7 @@ package az.developia.spring_project_14aprel.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -144,7 +145,13 @@ public class UserService {
 		if (!user.isPresent() || !passwordEncoder.matches(dto.getPassword(), user.get().getPassword()) ) {
 			throw new RuntimeException("Username or password incorrect!");
 		}
-		return jwtUtil.generateToken(user.get().getUsername());
+		
+	    List<String> authorities = authorityRepository.findByUsername(user.get().getUsername())
+	    		.stream()
+	    		.map(Authority :: getAuthority)
+	    		.collect(Collectors.toList());
+		
+		return jwtUtil.generateToken(user.get().getUsername(), authorities);
 	}
 
 

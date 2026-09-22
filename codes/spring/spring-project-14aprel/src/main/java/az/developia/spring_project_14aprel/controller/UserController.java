@@ -2,6 +2,8 @@ package az.developia.spring_project_14aprel.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import az.developia.spring_project_14aprel.config.LogDemo;
 import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.exception.ValidationException;
 import az.developia.spring_project_14aprel.exception.UserNotFoundException;
@@ -28,6 +31,8 @@ import jakarta.validation.Valid;
 @RequestMapping(path = "/users")
 @CrossOrigin(origins = "*")
 public class UserController {
+	
+	private Logger log = LoggerFactory.getLogger(LogDemo.class);
 
 	@Autowired
 	private UserService userService;
@@ -39,10 +44,15 @@ public class UserController {
 	description = "Resource founded")
 	@PostMapping(path = "/add")
 	public void addUser(@Valid @RequestBody UserRequestDto dto, BindingResult br) throws ValidationException, UserNotFoundException{
+		
+		log.info("metod ise dusdu");
+		
 		if (br.hasErrors()) {
 			throw new ValidationException(br, "melumatlarin tamliginda problem var!");
 		}
 		userService.createUser(dto);
+		
+		log.info("metod isini bitirdi");
 	}
 	
 	@GetMapping(path = "/getUsers")
@@ -52,7 +62,11 @@ public class UserController {
 	
 	@DeleteMapping(path = "/{id}")
 	public void deleteUser(@PathVariable Integer id) {
+//		log.info("metod ise dusdu");
+		
 		userService.delete(id);
+		
+//		log.info("metod isini bitirdi");
 	}
 	
 	@GetMapping(path = "/get") 

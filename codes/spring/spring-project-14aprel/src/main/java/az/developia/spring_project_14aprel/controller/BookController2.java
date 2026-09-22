@@ -88,7 +88,7 @@ public class BookController2 {
 
 	@ResponseStatus(code = HttpStatus.CREATED)
 	@PostMapping(path = "/addBook")
-	@PreAuthorize("hasAuthority(ROLE_USER)")
+	@PreAuthorize("hasAuthority('ROLE_USER')")
 	public String addBook(@RequestBody BookRequestDto dto) {
 
 		return bookService.addBook(dto);

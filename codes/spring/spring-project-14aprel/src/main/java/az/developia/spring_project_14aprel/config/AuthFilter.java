@@ -3,11 +3,14 @@ package az.developia.spring_project_14aprel.config;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.catalina.loader.WebappClassLoader;
 import org.apache.catalina.startup.WebAnnotationSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -39,8 +42,19 @@ public class AuthFilter extends OncePerRequestFilter {
 		String token = header.substring(7); //Bearer sozunu at
 		String username = jwtUtil.extractUsername(token);
 		if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-			User userDetails = new User(username, "", new ArrayList<>());
-			UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+			
+			Map<String,Object> claims = jwtUtil.extractClaims(token);
+			
+			List<String> authorities =  (List<String>) claims.get("authorities");
+			
+			List<SimpleGrantedAuthority> grantedAuthority = authorities.stream()
+					.map(SimpleGrantedAuthority::new)
+					.collect(Collectors.toList());
+			
+			
+			
+			User userDetails = new User(username, "", grantedAuthority);
+			UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userDetails, "", grantedAuthority);
 			authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 			
 			SecurityContextHolder.getContext().setAuthentication(authToken);

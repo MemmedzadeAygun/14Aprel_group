@@ -56,10 +56,17 @@ public class BookController2 {
 	
 	@ResponseStatus(code = HttpStatus.OK)
 	@GetMapping(path = "/findAll")
-	@Cacheable(value = "books")
+//	@Cacheable(value = "books")
 	public BookListResponseDto getBooks() {
 		System.out.println("Database-den oxundu!");
 		return bookService.getBooks();
+	}
+	
+	@ResponseStatus(code = HttpStatus.OK)
+	@GetMapping(path = "/myBooks")
+	public BookListResponseDto getMyBooks() {
+		System.out.println("Database-den oxundu!");
+		return bookService.getMyBooks();
 	}
 	
 	////api/books/pagination/begin/0/length/10"

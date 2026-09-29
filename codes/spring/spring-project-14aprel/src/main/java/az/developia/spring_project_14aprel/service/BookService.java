@@ -7,11 +7,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import az.developia.spring_project_14aprel.entity.Book;
+import az.developia.spring_project_14aprel.entity.User;
 import az.developia.spring_project_14aprel.repository.BookRepo;
 import az.developia.spring_project_14aprel.repository.BookRepository;
+import az.developia.spring_project_14aprel.repository.UserRepository;
 import az.developia.spring_project_14aprel.requestDto.BookRequestDto;
 import az.developia.spring_project_14aprel.responseDto.BookListResponseDto;
 import az.developia.spring_project_14aprel.responseDto.BookResponseDto;
@@ -22,6 +25,9 @@ public class BookService {
 	
 	@Autowired
 	private BookRepository bookRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@Autowired
 	private BookRepo bookRepo;
@@ -43,8 +49,20 @@ public class BookService {
 		dto.setBooks(all);
 		dto.setColor("Red");
 		return dto;
-	}
+	}	
 	
+	
+	public BookListResponseDto getMyBooks() {
+		String username = SecurityContextHolder.getContext().getAuthentication().getName();
+		Optional<User> byUsername = userRepository.findByUsername(username);
+		Integer userId = byUsername.get().getId();
+		
+		List<Book> all = bookRepo.findAllByUserId(userId);
+		BookListResponseDto dto = new BookListResponseDto();
+		dto.setBooks(all);
+		dto.setColor("Red");
+		return dto;
+	}	
 	
 
 //	obyekt -> entity -> dto object
@@ -67,8 +85,13 @@ public class BookService {
 
 //	obyekt -> dto obyekt -> entity object
 	public String addBook(BookRequestDto d) {
+		String username = SecurityContextHolder.getContext().getAuthentication().getName();
+		Optional<User> byUsername = userRepository.findByUsername(username);
+		Integer userId = byUsername.get().getId();
+		
 		Book book = new Book();
 		modelMapper.map(d, book);
+		book.setUserId(userId);
 		bookRepo.save(book);
 		return "Kitab ugurla qeydiyyat edildi!";
 	}
@@ -115,4 +138,13 @@ public class BookService {
 		
 		return bookRepo.findAll(pagable);
 	}
+	
+	public double calculatePrice(double price, int quantity) {
+		return price * quantity;
+	}
+	
+	public boolean isAvailable(int stock) {
+		return stock > 0;
+	}
+	
 }

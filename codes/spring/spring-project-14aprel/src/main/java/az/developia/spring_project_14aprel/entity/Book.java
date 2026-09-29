@@ -51,4 +51,6 @@ public class Book implements Serializable{
 	@OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Favorite> favorite; 
+	
+	private Integer userId;
 }

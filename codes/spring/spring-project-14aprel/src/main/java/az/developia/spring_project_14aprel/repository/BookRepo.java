@@ -27,4 +27,7 @@ public interface BookRepo extends JpaRepository<Book, Integer>{
 	//SELECT * from book limit 0, 10
 	@Query(value = "SELECT * from book limit ?1, ?2", nativeQuery = true)
 	List<Book> pagination(Integer begin, Integer length);
+
+	List<Book> findAllByUserId(Integer userId);
+
 }

@@ -1,4 +1,4 @@
-package az.developia.spring_project_14aprel.bookService;
+package az.developia.spring_project_14aprel.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

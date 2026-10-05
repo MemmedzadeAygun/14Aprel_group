@@ -12,6 +12,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer.FrameOptionsConfig;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -39,10 +40,13 @@ public class SecurityConfig {
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth -> 
+		http.csrf(csrf -> csrf.disable())
+		.headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
+		.authorizeHttpRequests(auth -> 
 		auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 		.requestMatchers(HttpMethod.POST, "/users/add").permitAll()
 		.requestMatchers(HttpMethod.POST, "/users/login").permitAll()
+		.requestMatchers("/h2-console/**").permitAll()
 		.anyRequest().authenticated())
 		.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 //				.httpBasic(Customizer.withDefaults());

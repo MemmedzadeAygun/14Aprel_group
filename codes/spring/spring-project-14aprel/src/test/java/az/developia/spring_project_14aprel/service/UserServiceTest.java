@@ -10,7 +10,7 @@ import az.developia.spring_project_14aprel.repository.UserRepository;
 import az.developia.spring_project_14aprel.requestDto.UserRequestDto;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 public class UserServiceTest {
 
 	@Autowired

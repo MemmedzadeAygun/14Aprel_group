@@ -19,7 +19,6 @@ public class UserRepositoryTest {
 	@Transactional
 	void test_userCreate() {
 		User user = new User();
-//		user.setId(1);
 		user.setFirstName("Xedice");
 		user.setLastName("Novruzova");
 		

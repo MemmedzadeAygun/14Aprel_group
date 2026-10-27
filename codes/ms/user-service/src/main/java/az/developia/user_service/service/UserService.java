@@ -19,6 +19,9 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private RestTemplate restTemplate;
 
 	public UserListResponse getAllUsers() {
 		UserListResponse resp = new UserListResponse();
@@ -30,7 +33,7 @@ public class UserService {
 	public UserListResponse getAllUsersWithBooks() {
 		UserListResponse resp = new UserListResponse();
 		
-		RestTemplate rest = new RestTemplate();
+		
 		ArrayList<UserResponse> userResp = new ArrayList<UserResponse>();
 		
 		List<User> users = userRepository.findAll();
@@ -40,8 +43,8 @@ public class UserService {
 			userResponse.setFirstName(user.getFirstName());
 			userResponse.setLastName(user.getLastName());
 			userResponse.setAge(user.getAge());
-			
-			BookListResponse bookListResponse = rest.getForObject("http://localhost:8001/books/user/" + user.getId(), BookListResponse.class);
+			 
+			BookListResponse bookListResponse = restTemplate.getForObject("http://book-service/books/user/" + user.getId(), BookListResponse.class);
 			
 			userResponse.setBookResponse(bookListResponse.getBookListResponse());
 			userResp.add(userResponse);
@@ -49,7 +52,7 @@ public class UserService {
 		
 		resp.setUserListResponseWithBooks(userResp);
 		return resp;
-	}
+	} 
 
 	
 	

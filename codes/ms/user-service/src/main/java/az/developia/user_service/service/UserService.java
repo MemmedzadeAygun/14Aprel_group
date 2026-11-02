@@ -21,7 +21,7 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	@Autowired
-	private RestTemplate restTemplate;
+	private BookClient bookClient;
 
 	public UserListResponse getAllUsers() {
 		UserListResponse resp = new UserListResponse();
@@ -44,7 +44,8 @@ public class UserService {
 			userResponse.setLastName(user.getLastName());
 			userResponse.setAge(user.getAge());
 			 
-			BookListResponse bookListResponse = restTemplate.getForObject("http://book-service/books/user/" + user.getId(), BookListResponse.class);
+//			BookListResponse bookListResponse = restTemplate.getForObject("http://book-service/books/user/" + user.getId(), BookListResponse.class);
+			BookListResponse bookListResponse = bookClient.getBooks(user.getId());
 			
 			userResponse.setBookResponse(bookListResponse.getBookListResponse());
 			userResp.add(userResponse);

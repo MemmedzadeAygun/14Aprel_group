@@ -17,7 +17,7 @@ import java.time.Duration;
 public class RouterConfig {
 
 	@Bean
-	public RouterFunction<ServerResponse> routerConfig(){
+	public RouterFunction<ServerResponse> userServiceRoute(){
 		return route("user-service")
 				.GET("/users/**", http())
 				.before(uri("http://localhost:8002"))

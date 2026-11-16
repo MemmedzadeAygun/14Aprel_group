@@ -36,7 +36,8 @@ public class UserController {
 		userService.addUser(dto);
 	}
 	
-	@GetMapping(path = "/{id}", produces = {"application/json", "application/xml"})
+//	@GetMapping(path = "/{id}", produces = {"application/json", "application/xml"})
+	@GetMapping(path = "/{id}")
 	public UserResponseDto getUser(@PathVariable Integer id) {
 		return userService.getUser(id);
 	}

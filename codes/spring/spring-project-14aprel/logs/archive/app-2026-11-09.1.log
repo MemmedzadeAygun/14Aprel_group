@@ -1,0 +1,55 @@
+2026-11-09 21:50:46.555 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration az.developia.spring_project_14aprel.SpringProject14aprelApplication for test class az.developia.spring_project_14aprel.SpringProject14aprelApplicationTests
+2026-11-09 21:50:46.597 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-11-09 21:50:47.218 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-11-09 21:50:47.276 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-11-09 21:50:47.353 INFO  a.d.s.SpringProject14aprelApplicationTests - Starting SpringProject14aprelApplicationTests using Java 21.0.8 with PID 26660 (started by User in C:\Github\14Aprel_group\codes\spring\spring-project-14aprel)
+2026-11-09 21:50:47.355 INFO  a.d.s.SpringProject14aprelApplicationTests - The following 1 profile is active: "dev"
+2026-11-09 21:50:47.903 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-09 21:50:47.903 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-09 21:50:47.935 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2026-11-09 21:50:47.944 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-09 21:50:47.944 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-09 21:50:47.956 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.AuthorityRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-09 21:50:47.957 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.BookRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-09 21:50:47.958 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.spring_project_14aprel.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-09 21:50:47.958 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-11-09 21:50:48.165 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-09 21:50:48.229 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-09 21:50:48.234 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-11-09 21:50:48.237 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:test user=ROOT
+2026-11-09 21:50:48.237 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-11-09 21:50:48.238 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-09 21:50:48.413 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-09 21:50:48.448 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-09 21:50:48.799 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-09 21:50:48.866 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 70910330-0a3a-425f-a5be-43fdc4e895d2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-09 21:50:48.868 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-09 21:50:49.387 INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-11-09 21:50:49.434 INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#43f3ff50:0/SimpleConnection@620e5544 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58398]
+2026-11-09 21:50:49.469 INFO  a.d.s.SpringProject14aprelApplicationTests - Started SpringProject14aprelApplicationTests in 2.192 seconds (process running for 29.149)
+2026-11-09 21:50:49.472 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-09 21:50:49.472 WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-11-09 21:50:49.526 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-09 21:50:49.536 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-11-09 21:50:49.541 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-11-09 21:50:49.571 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-11-09 21:50:50.466 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-11-09 21:50:50.475 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-09 21:50:50.476 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-11-09 21:50:50.485 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-movieapp
+spec:
+  containers:
+    - name: movie-container
+      image: movie-project:v1
